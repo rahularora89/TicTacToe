@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package tictactoe.player;
+package player;
 
 import java.util.Stack;
 
@@ -15,6 +15,8 @@ public class Player {
     
     //Track playerMoves of each player
     private Stack<Integer> playerMoves;
+    
+    private Boolean isComputer;
 
     public Stack<Integer> getPlayerMoves() {
         return playerMoves;
@@ -22,6 +24,14 @@ public class Player {
 
     public void setPlayerMoves(Stack<Integer> playerMoves) {
         this.playerMoves = playerMoves;
+    }
+
+    public Boolean getIsComputer() {
+        return isComputer;
+    }
+
+    public void setIsComputer(Boolean isComputer) {
+        this.isComputer = isComputer;
     }
     
     

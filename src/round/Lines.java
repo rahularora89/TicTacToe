@@ -14,6 +14,11 @@ import java.util.List;
  */
 public class Lines {
     
+    /*
+        Each matrix will have n rows, n columns and two diagonals as winningLines
+        for a 'n' sized matrix to play tic-tac-toe. This functions returns a List
+        of all those elements in each winning line.
+    */
     public List<List<String>> winningLines(int size){
         int[][] matrix=new int[size][size];
         List<List<String>> list=new ArrayList<>();
@@ -48,6 +53,11 @@ public class Lines {
         return list;
 }
     
+/*
+    Each position will have a list of winning lines from where we mark. These possible
+    winning lines are a subset of the above winningLines. AI needs this information
+    to mark next move accordingly.
+*/    
 public List<List<String>> possibleWinningLines(int size, String position){
     List<List<String>> list=new ArrayList<>();
     String[] rc = position.split("");
@@ -65,18 +75,6 @@ public List<List<String>> possibleWinningLines(int size, String position){
         //find winninLines with this i & j
     }
     return list;
-}
-
-public void diplayTicTacToe(int size){
-    int[][] matrix=new int[size][size];
-    for(int i=0;i<size;i++){
-        for(int j=0;j<size;j++){
-                System.out.print(matrix[i][j]);
-                if(j<size-1)
-                System.out.print(" | ");
-        }
-        System.out.println();
-    }
 }
 
 }

@@ -13,9 +13,7 @@ package round;
 public class AIMove {
     
     /*
-     * 
-     * 
-     * 
+     * Algorithm to update the matrix precisely in order to win or draw the match.
      */
     public String positionToFill(String[][] inputMatrix){
         return "";
